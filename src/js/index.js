@@ -13,13 +13,16 @@ function populateList(vagas){
 
     vagas.forEach(vaga => {
         console.log(vaga)
-        let li = document.createElement("li");
-        let location = document.createElement("span.location");
-        li.textContent = vaga.cargo;
+        let li = document.createElement("li")
+        let a = document.createElement("a")
+        let location = document.createElement("span")
+        a.textContent = vaga.cargo
+        a.href = "#"
         location.textContent = vaga.localizacao?vaga.localizacao.bairro + ' - ' + vaga.localizacao.cidade:"Remoto"
-        li.appendChild(location)
+        a.appendChild(location)
+        li.appendChild(a)
 
-        positionsList.appendChild(li);
+        positionsList.appendChild(li)
         
     });
 

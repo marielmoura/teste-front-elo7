@@ -38,7 +38,22 @@ h3{
 }
 p{
 }
-
+ul{
+  list-style: none;
+  padding: 0;
+  li{
+    margin: 1rem 0;
+    a{
+      display: block;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      span{
+        color: $font-color;
+        display: block;
+      }
+    }
+  }
+}
 img{
   width: 100%;
 }
@@ -62,6 +77,8 @@ a{
 
 .container{
   padding: 0 3rem;
+  max-width: 860px;
+  margin: 0 auto;
 }
 header{
   background: url('../img/foto-header.png') no-repeat;
@@ -89,6 +106,13 @@ section{
     }
   }
   &#beneficios{
+    .pure-g{
+      justify-content: center;
+      margin: 0 -1.5rem;
+      >div{
+        padding: 0 1.5em;
+      }
+    }
     img{
       width: 160px;
       display: block;
@@ -99,3 +123,34 @@ section{
     }
   }
 }
+
+@media screen and (min-width: 35.5em){
+  ul{
+    li{
+      margin: 1rem 0;
+      clear: both;
+      a{
+        display: block;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        span{
+          float: right;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 48em){
+  .ceo-text{
+    padding-left: 2rem;
+  }
+  ul{
+    li{
+      a{
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+      }
+    }
+  }
+}
+
